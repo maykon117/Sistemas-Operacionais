@@ -5,3 +5,20 @@ Os três códigos presentes nesta pasta correspondem ao Trabalho I da disciplina
 Os experimentos utilizam fork(), wait(), waitpid(), PIDs e códigos de retorno para observar o comportamento dos processos. Entretanto, a análise deve considerar que a ordem observada também é influenciada pela própria construção do programa e pelo escalonamento realizado pelo sistema operacional. Após um fork(), pai e filho tornam-se processos concorrentes, e não há garantia de que serão executados ou terminarão na ordem em que foram criados.
 
 Dessa forma, os experimentos servem como base para discutir as diferenças entre ordem de criação, execução, término e coleta dos processos, bem como o papel dos mecanismos de sincronização. A investigação mais adequada exige também observar o comportamento dos processos sem wait() ou waitpid(), reduzindo a influência da sincronização explicitamente definida pelo próprio código.
+
+Adicionado:
+# Simulador de Tratamento de Faltas de Página (Algoritmo FIFO)
+
+Simulador desenvolvido em **linguagem C** para a disciplina de **Sistemas Operacionais** (IFCE Campus Maracanaú). O programa demonstra o comportamento do gerenciamento de memória virtual utilizando a política de substituição de páginas **FIFO (First In, First Out)**.
+
+---
+
+##  Funcionalidades
+
+* Simulação interativa do mapeamento de páginas em quadros de memória RAM.
+* Contabilização precisa de:
+  * **Page Hits** (Acertos de página)
+  * **Page Faults** (Faltas de página)
+  * **Substituições** de páginas utilizando um ponteiro circular.
+* Exibição visual passo a passo do estado atual da memória a cada acesso.
+* Cálculo final da **taxa de faltas de página (%)**.
